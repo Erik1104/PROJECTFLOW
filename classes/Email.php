@@ -34,7 +34,7 @@ class Email {
 
       $contenido = "<html>";
       $contenido .= "<p><strong> Hola " . $this->nombre . "</strong> Has creado tu cuenta en ProjectFlow, solo debes confirmala presionando el siguiente enlace</p>";
-      $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar?token=" . $this->token."'>Restablecer contraseña </a> </p>";
+      $contenido .= "<p>Presiona aquí: <a href='/confirmar?token=" . $this->token."'>Restablecer contraseña </a> </p>";
       $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
       $contenido .= "</html>";
       $mail->Body = $contenido;
@@ -63,7 +63,7 @@ class Email {
     
       $contenido = "<html>";
       $contenido .= "<p><strong> Hola " . $this->nombre . "</strong> Has solicitado restablecer tu contraseña, sigue el siguiente enlace para hacerlo. </p>";
-      $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/restablecer?token="  . $this->token . "'>Restablecer contraseña </a> </p>";
+      $contenido .= "<p>Presiona aquí: <a href='/restablecer?token="  . $this->token . "'>Restablecer contraseña </a> </p>";
       $contenido .= "<p> Si tu no solicitaste este cambio, puedes ignorar el mensaje</p>";
       $contenido .= "</html>";
       $mail->Body = $contenido;
